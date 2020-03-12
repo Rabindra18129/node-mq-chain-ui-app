@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('partials/header') %>
+</header>
+
+<main>
+    <div class="card" style="width: auto;">
+        <div class="card-body">
+          <h5 class="card-title">Data from Chain</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Total number of recrods in stream is <b> <%= dataCount %> </b> </h6>
+          <a class="btn btn-primary" href="/" role="button">Refresh</a>
+          <p></p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Key Name</th>
+                <th scope="col">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% chainData.forEach((keyData)=>{ %>
+                <tr>
+                    <td> <%= keyData.key %> </td>
+                    <td><%= keyData.data %> </td>
+                </tr>
+                <% })%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('partials/header') %>
+</header>
+
+<main>
+    <div class="card" style="width: auto;">
+        <div class="card-body">
+          <h5 class="card-title">Error Happend</h5>
+          <h6 class="card-subtitle mb-2 text-muted"> Error Message is : <b> <%= error.message %> </b> </h6>
+          
+        </div>
+      </div>
+</main>
+
+</body>
+</html>
